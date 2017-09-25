@@ -1,0 +1,1 @@
+docker exec -it qrl-node bash -c "telnet localhost 2000"
