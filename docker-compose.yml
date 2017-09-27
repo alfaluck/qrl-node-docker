@@ -8,15 +8,9 @@ services:
     volumes:
       - "qrldata:/root/.qrl"
     ports:
-      #- "2000:2000"
       - "8080:8080"
       - "8888:8888"
       - "9000:9000"
-    networks:
-      - qrl_net
-networks:
-  qrl_net:
-    # Use a custom driver
-    driver: bridge
+    network_mode: "host"
 volumes:
   qrldata:
