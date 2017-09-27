@@ -1,8 +1,9 @@
 version: '3'
 services:
   node:
-    build:
-      context: .
+# Build section is required only when new image compiling performs
+#    build:
+#      context: .
     image: alfaluck/qrl-node:latest
     container_name: qrl-node
     volumes:
@@ -11,6 +12,10 @@ services:
       - "8080:8080"
       - "8888:8888"
       - "9000:9000"
-    network_mode: "host"
+    networks:
+      - qrl_net
+networks:
+  qrl_net:
+    driver: bridge
 volumes:
   qrldata:

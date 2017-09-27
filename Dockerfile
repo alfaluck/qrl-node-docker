@@ -14,7 +14,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 
     # opening access from host system
-    && sed -i "s/TCP4ServerEndpoint(reactor, 8888, interface='127.0.0.1')/TCP4ServerEndpoint(reactor, 8888)/" ./qrl/webwallet.py
+    && sed -i "s/TCP4ServerEndpoint(reactor, 8888, interface='127.0.0.1')/TCP4ServerEndpoint(reactor, 8888)/" /qrl-node/qrl/webwallet.py
 
 EXPOSE 8080 8888 9000
 
