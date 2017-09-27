@@ -12,6 +12,8 @@
 
 **logs** - Realtime status checking using container's log
 
+**logs_export** - Exports last 10 000 rows of log
+
 **telnet** - Connects to the node's 2000 port via telnet
 
 **resources_usage** - Monitors of resources used by Python inside the container
